@@ -1,0 +1,87 @@
+{
+  "kind": "androidmanagement#policy",
+  "passwordRequirements": {
+    "passwordMinimumLength": 8,
+    "passwordMinimumLetters": 2,
+    "passwordMinimumLowerCase": 1,
+    "passwordMinimumNonLetter": 2,
+    "passwordMinimumNumeric": 1,
+    "passwordMinimumSymbols": 1,
+    "passwordMinimumUpperCase": 1,
+    "passwordQuality": "COMPLEX",
+    "passwordHistoryLength": 10,
+    "maximumFailedPasswordsForWipe": 5,
+    "passwordExpirationTimeout": "2592000s",
+    "passwordScope": "SCOPE_DEVICE",
+    "requirePasswordUnlock": "REQUIRE_EVERY_DAY"
+  },
+  "applications": [
+    {
+      "packageName": "com.lifestudio.mdm.shield",
+      "installType": "FORCE_INSTALLED",
+      "defaultPermissionPolicy": "GRANT",
+      "managedConfiguration": {
+        "webFilter": "extreme",
+        "malwareBlocking": true,
+        "phishingProtection": true
+      }
+    },
+    {
+      "packageName": "com.google.android.apps.docs",
+      "installType": "BLOCKED"
+    },
+    {
+      "packageName": "com.android.vending",
+      "installType": "BLOCKED"
+    }
+  ],
+  "advancedSecurityOverrides": {
+    "untrustedAppsPolicy": "DISALLOW_INSTALL",
+    "googlePlayProtectVerifyApps": "ENFORCE",
+    "developerSettings": "DISALLOWED",
+    "commonCriteriaMode": "ENFORCED"
+  },
+  "permittedInputMethods": [
+    "com.google.android.inputmethod.latin"
+  ],
+  "safeBootDisabled": true,
+  "debuggingFeaturesAllowed": false,
+  "factoryResetDisabled": true,
+  "statusBarDisabled": true,
+  "keyguardDisabled": false,
+  "screenCaptureDisabled": true,
+  "cameraDisabled": true,
+  "adjustVolumeDisabled": true,
+  "bluetoothDisabled": true,
+  "networkResetDisabled": true,
+  "modifyAccountsDisabled": true,
+  "addUserDisabled": true,
+  "removeUserDisabled": true,
+  "usbFileTransferDisabled": true,
+  "unmuteMicrophoneDisabled": true,
+  "accountTypesWithManagementDisabled": [
+    "com.google",
+    "com.facebook.auth.login"
+  ],
+  "appAutoUpdatePolicy": "ALWAYS",
+  "systemUpdate": {
+    "type": "AUTOMATIC",
+    "freezePeriods": []
+  },
+  "complianceRules": [
+    {
+      "enable": true,
+      "passwordRequirements": {
+        "passwordMinimumLength": 8,
+        "passwordQuality": "COMPLEX"
+      },
+      "safetyNetHardwareAttestation": "BASIC",
+      "apiLevel": 30
+    }
+  ],
+  "vpnConfig": {
+    "alwaysOnVpnPackage": "com.lifestudio.mdm.vpn",
+    "lockdownEnabled": true
+  },
+  "alwaysOnVpnPackage": "com.lifestudio.mdm.vpn"
+}
