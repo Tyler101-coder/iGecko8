@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+    ============================================================
+     iGecko8 — Mobile Configuration
+     Created By : LifeStudio MDM Services Inc
+     Security   : Extreme
+     Supports   : iOS / Android (profile install)
+     Purpose    : Faster Performance, Extreme Security,
+                  Jailbreak-Resistant, Malware-Free
+     NOTE       : Installing this profile will restart the device
+                  so that all system-level changes can be applied.
+    ============================================================
+-->
+<plist version="1.0">
+<dict>
+
+    <!-- ==========================================================
+         PAYLOAD CONTENT
+         ========================================================== -->
+    <key>PayloadContent</key>
+    <array>
+
+        <!-- ======================================================
+             01 — PASSCODE POLICY
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.mobiledevice.passwordpolicy</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.passcode</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6001</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Passcode Policy</string>
+            <key>PayloadDescription</key>
+            <string>Enforces an alphanumeric passcode with history, complexity and aging requirements. Blocks simple passcodes and delays brute-force attempts.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>allowSimple</key>
+            <false/>
+            <key>forcePIN</key>
+            <true/>
+            <key>changeAtNextAuth</key>
+            <true/>
+            <key>maxFailedAttempts</key>
+            <integer>6</integer>
+            <key>maxGracePeriod</key>
+            <integer>0</integer>
+            <key>maxInactivity</key>
+            <integer>2</integer>
+            <key>maxPINAgeInDays</key>
+            <integer>30</integer>
+            <key>minComplexChars</key>
+            <integer>4</integer>
+            <key>minLength</key>
+            <integer>8</integer>
+            <key>pinHistory</key>
+            <integer>12</integer>
+            <key>requireAlphanumeric</key>
+            <true/>
+            <key>allowFingerprintForUnlock</key>
+            <true/>
+            <key>allowFingerprintModification</key>
+            <false/>
+        </dict>
+
+        <!-- ======================================================
+             02 — RESTRICTIONS (Application Access)
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.applicationaccess</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.restrictions</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6002</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Restrictions</string>
+            <key>PayloadDescription</key>
+            <string>Locks down system features, blocks sideloading, untrusted enterprise apps and unmanaged data flow. Core of the Jailbreak-Resistant layer.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+
+            <key>allowAccountModification</key>
+            <false/>
+            <key>allowAirDrop</key>
+            <false/>
+            <key>allowAirPrint</key>
+            <true/>
+            <key>allowAirPrintCredentialsStorage</key>
+            <false/>
+            <key>allowAppCellularDataModification</key>
+            <false/>
+            <key>allowAppClips</key>
+            <false/>
+            <key>allowAppInstallation</key>
+            <false/>
+            <key>allowAppRemoval</key>
+            <false/>
+            <key>allowApplePersonalizedAdvertising</key>
+            <false/>
+            <key>allowAssistant</key>
+            <true/>
+            <key>allowAssistantUserGeneratedContent</key>
+            <false/>
+            <key>allowAssistantWhileLocked</key>
+            <false/>
+            <key>allowAutoCorrection</key>
+            <false/>
+            <key>allowAutoUnlock</key>
+            <false/>
+            <key>allowBluetoothModification</key>
+            <false/>
+            <key>allowBookstore</key>
+            <false/>
+            <key>allowBookstoreErotica</key>
+            <false/>
+            <key>allowCamera</key>
+            <true/>
+            <key>allowCellularPlanModification</key>
+            <false/>
+            <key>allowChat</key>
+            <true/>
+            <key>allowCloudDocumentSync</key>
+            <false/>
+            <key>allowCloudKeychainSync</key>
+            <true/>
+            <key>allowCloudPhotoLibrary</key>
+            <false/>
+            <key>allowCloudPrivateRelay</key>
+            <true/>
+            <key>allowDefinitionLookup</key>
+            <false/>
+            <key>allowDeviceNameModification</key>
+            <false/>
+            <key>allowDeviceSleep</key>
+            <true/>
+            <key>allowDiagnosticSubmission</key>
+            <false/>
+            <key>allowDiagnosticSubmissionModification</key>
+            <false/>
+            <key>allowEnterpriseAppTrust</key>
+            <false/>
+            <key>allowEnterpriseBookBackup</key>
+            <false/>
+            <key>allowEnterpriseBookMetadataSync</key>
+            <false/>
+            <key>allowESIMModification</key>
+            <false/>
+            <key>allowExplicitContent</key>
+            <false/>
+            <key>allowFilesNetworkDriveAccess</key>
+            <false/>
+            <key>allowFilesUSBDriveAccess</key>
+            <false/>
+            <key>allowFindMyDevice</key>
+            <true/>
+            <key>allowFindMyFriends</key>
+            <false/>
+            <key>allowFingerprintForUnlock</key>
+            <true/>
+            <key>allowGlobalBackgroundFetchWhenRoaming</key>
+            <false/>
+            <key>allowHostPairing</key>
+            <false/>
+            <key>allowInAppPurchases</key>
+            <false/>
+            <key>allowiTunes</key>
+            <false/>
+            <key>allowiTunesFileSharing</key>
+            <false/>
+            <key>allowManagedAppsCloudSync</key>
+            <false/>
+            <key>allowMultiplayerGaming</key>
+            <false/>
+            <key>allowMusicService</key>
+            <false/>
+            <key>allowNews</key>
+            <false/>
+            <key>allowNotificationsModification</key>
+            <false/>
+            <key>allowOpenFromManagedToUnmanaged</key>
+            <false/>
+            <key>allowOpenFromUnmanagedToManaged</key>
+            <false/>
+            <key>allowOTAPKIUpdates</key>
+            <true/>
+            <key>allowPairedWatch</key>
+            <false/>
+            <key>allowPasscodeModification</key>
+            <false/>
+            <key>allowPasswordAutoFill</key>
+            <false/>
+            <key>allowPasswordProximityRequests</key>
+            <false/>
+            <key>allowPasswordSharing</key>
+            <false/>
+            <key>allowPersonalHotspotModification</key>
+            <false/>
+            <key>allowPhotoStream</key>
+            <false/>
+            <key>allowPodcasts</key>
+            <false/>
+            <key>allowPredictiveKeyboard</key>
+            <false/>
+            <key>allowProximitySetupToNewDevice</key>
+            <false/>
+            <key>allowRemoteAppPairing</key>
+            <false/>
+            <key>allowRemoteScreenObservation</key>
+            <false/>
+            <key>allowSafari</key>
+            <true/>
+            <key>allowSafariAutoFill</key>
+            <false/>
+            <key>allowSafariPrivateBrowsing</key>
+            <false/>
+            <key>allowScreenShot</key>
+            <false/>
+            <key>allowSharedStream</key>
+            <false/>
+            <key>allowSpellCheck</key>
+            <false/>
+            <key>allowSpotlightInternetResults</key>
+            <false/>
+            <key>allowStarRatingModification</key>
+            <false/>
+            <key>allowTodayViewModification</key>
+            <false/>
+            <key>allowUIAppInstallation</key>
+            <false/>
+            <key>allowUnpairedExternalBootToRecovery</key>
+            <false/>
+            <key>allowUntrustedTLSPrompt</key>
+            <false/>
+            <key>allowUSBRestrictedMode</key>
+            <true/>
+            <key>allowVideoConferencing</key>
+            <false/>
+            <key>allowVoiceDialing</key>
+            <false/>
+            <key>allowWallpaperModification</key>
+            <false/>
+            <key>allowWebContentFilter</key>
+            <true/>
+            <key>forceAssistantProfanityFilter</key>
+            <true/>
+            <key>forceEncryptedBackup</key>
+            <true/>
+            <key>forceITunesStorePasswordEntry</key>
+            <true/>
+            <key>forceLimitAdTracking</key>
+            <true/>
+            <key>forceOnDeviceOnlyDictation</key>
+            <true/>
+            <key>forceOnDeviceOnlyTranslation</key>
+            <true/>
+            <key>forcePIN</key>
+            <true/>
+            <key>ratingApps</key>
+            <integer>0</integer>
+            <key>ratingMovies</key>
+            <integer>0</integer>
+            <key>ratingRegion</key>
+            <string>us</string>
+            <key>ratingTVShows</key>
+            <integer>0</integer>
+            <key>safariAcceptCookies</key>
+            <integer>1</integer>
+            <key>safariAllowJavaScript</key>
+            <true/>
+            <key>safariAllowPopups</key>
+            <false/>
+            <key>safariForceFraudWarning</key>
+            <true/>
+        </dict>
+
+        <!-- ======================================================
+             03 — WEB CONTENT FILTER
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.webcontent-filter</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.webcontentfilter</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6003</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Shield Web Filter</string>
+            <key>PayloadDescription</key>
+            <string>Extreme website protection. Automatically blocks unsafe, unverified and known malware or phishing hosts. Whitelist and blacklist based filtering with socket-level inspection.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>FilterType</key>
+            <string>BuiltIn</string>
+            <key>UserDefinedName</key>
+            <string>iGecko8 Shield</string>
+            <key>AutoFilterEnabled</key>
+            <true/>
+            <key>URLFilterEnabled</key>
+            <true/>
+            <key>FilterSockets</key>
+            <true/>
+            <key>FilterPackets</key>
+            <true/>
+            <key>FilterGrade</key>
+            <string>firewall</string>
+            <key>FilterDataProviderBundleIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.shield</string>
+            <key>FilterDataProviderDesignatedRequirement</key>
+            <string>anchor apple generic and identifier "com.lifestudio.mdm.igecko8.shield"</string>
+            <key>PermittedURLs</key>
+            <array>
+                <string>https://*.apple.com</string>
+                <string>https://*.icloud.com</string>
+                <string>https://*.lifestudio.example</string>
+            </array>
+            <key>BlacklistedURLs</key>
+            <array>
+                <string>*.doubleclick.net</string>
+                <string>*.adservice.google.com</string>
+                <string>*.tracker.example</string>
+                <string>*.malwaredomainlist.example</string>
+                <string>*.phish-test.example</string>
+            </array>
+            <key>WhitelistedBookmarks</key>
+            <array>
+                <dict>
+                    <key>Title</key>
+                    <string>LifeStudio MDM Services Inc</string>
+                    <key>URL</key>
+                    <string>https://lifestudio.example</string>
+                </dict>
+                <dict>
+                    <key>Title</key>
+                    <string>iGecko8 Support</string>
+                    <key>URL</key>
+                    <string>https://lifestudio.example/igecko8/support</string>
+                </dict>
+            </array>
+        </dict>
+
+        <!-- ======================================================
+             04 — DNS SETTINGS (Encrypted DNS)
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.dns</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6004</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Encrypted DNS</string>
+            <key>PayloadDescription</key>
+            <string>Forces all DNS traffic through an encrypted DoH resolver with malware and phishing blocking enabled. Prevents DNS hijacking and spoofing.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>DNSProtocol</key>
+            <string>HTTPS</string>
+            <key>ServerURL</key>
+            <string>https://dns.lifestudio.example/dns-query</string>
+            <key>ServerURLs</key>
+            <array>
+                <string>https://dns.lifestudio.example/dns-query</string>
+                <string>https://dns2.lifestudio.example/dns-query</string>
+            </array>
+            <key>ServerAddresses</key>
+            <array>
+                <string>10.64.0.10</string>
+                <string>10.64.0.11</string>
+            </array>
+            <key>SupplementalMatchDomains</key>
+            <array>
+                <string>lifestudio.example</string>
+                <string>igecko8.example</string>
+            </array>
+            <key>DNSSettingsEnabled</key>
+            <true/>
+        </dict>
+
+        <!-- ======================================================
+             05 — VPN (IKEv2, Always-On)
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.vpn.managed</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.vpn</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6005</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Secure Tunnel</string>
+            <key>PayloadDescription</key>
+            <string>Always-on IKEv2 tunnel with perfect forward secrecy and certificate revocation checking. All device traffic is encrypted and inspected.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>UserDefinedName</key>
+            <string>iGecko8 Secure Tunnel</string>
+            <key>VPNType</key>
+            <string>IKEv2</string>
+            <key>VPNSubType</key>
+            <string>com.apple.ikev2</string>
+            <key>VendorConfig</key>
+            <dict/>
+            <key>VPN</key>
+            <dict>
+                <key>AuthenticationMethod</key>
+                <string>Certificate</string>
+                <key>RemoteAddress</key>
+                <string>vpn.lifestudio.example</string>
+                <key>LocalIdentifier</key>
+                <string>igecko8-client</string>
+                <key>RemoteIdentifier</key>
+                <string>vpn.lifestudio.example</string>
+                <key>ServerCertificateIssuerCommonName</key>
+                <string>LifeStudio MDM Root CA</string>
+                <key>ServerCertificateCommonName</key>
+                <string>vpn.lifestudio.example</string>
+                <key>PayloadCertificateUUID</key>
+                <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6007</string>
+                <key>ExtendedAuthEnabled</key>
+                <integer>0</integer>
+                <key>DisableRedirect</key>
+                <true/>
+                <key>EnablePFS</key>
+                <true/>
+                <key>EnableCertificateRevocationCheck</key>
+                <true/>
+                <key>IKESecurityAssociationParameters</key>
+                <dict>
+                    <key>EncryptionAlgorithm</key>
+                    <string>AES-256-GCM</string>
+                    <key>IntegrityAlgorithm</key>
+                    <string>SHA2-512</string>
+                    <key>DiffieHellmanGroup</key>
+                    <integer>21</integer>
+                    <key>LifetimeInMinutes</key>
+                    <integer>60</integer>
+                </dict>
+                <key>ChildSecurityAssociationParameters</key>
+                <dict>
+                    <key>EncryptionAlgorithm</key>
+                    <string>AES-256-GCM</string>
+                    <key>IntegrityAlgorithm</key>
+                    <string>SHA2-512</string>
+                    <key>DiffieHellmanGroup</key>
+                    <integer>21</integer>
+                    <key>LifetimeInMinutes</key>
+                    <integer>30</integer>
+                </dict>
+            </dict>
+            <key>OnDemandEnabled</key>
+            <integer>1</integer>
+            <key>OnDemandRules</key>
+            <array>
+                <dict>
+                    <key>Action</key>
+                    <string>Connect</string>
+                    <key>InterfaceTypeMatch</key>
+                    <string>WiFi</string>
+                </dict>
+                <dict>
+                    <key>Action</key>
+                    <string>Connect</string>
+                    <key>InterfaceTypeMatch</key>
+                    <string>Cellular</string>
+                </dict>
+                <dict>
+                    <key>Action</key>
+                    <string>Connect</string>
+                    <key>InterfaceTypeMatch</key>
+                    <string>Any</string>
+                </dict>
+            </array>
+            <key>OverridePrimary</key>
+            <integer>1</integer>
+        </dict>
+
+        <!-- ======================================================
+             06 — WI-FI
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.wifi.managed</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.wifi</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6006</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Secure Wi-Fi</string>
+            <key>PayloadDescription</key>
+            <string>Trusted corporate Wi-Fi network using WPA3 Enterprise with certificate based authentication. Auto-join is restricted to verified access points only.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>SSID_STR</key>
+            <string>LifeStudio-Secure</string>
+            <key>HIDDEN_NETWORK</key>
+            <false/>
+            <key>AutoJoin</key>
+            <true/>
+            <key>EncryptionType</key>
+            <string>WPA3</string>
+            <key>Password</key>
+            <string>iGecko8-Secure-WPA3-Key</string>
+            <key>ProxyType</key>
+            <string>None</string>
+            <key>DisableAssociationMACRandomization</key>
+            <true/>
+            <key>TLSCertificateRequired</key>
+            <true/>
+        </dict>
+
+        <!-- ======================================================
+             07 — ROOT CERTIFICATE
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.security.root</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.cert.root</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6007</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — LifeStudio MDM Root CA</string>
+            <key>PayloadDescription</key>
+            <string>Installs the LifeStudio MDM Services Inc root certificate authority. Required for the secure tunnel and certificate-based Wi-Fi authentication.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>PayloadCertificateFileName</key>
+            <string>LifeStudioMDMRootCA.cer</string>
+            <key>PayloadContent</key>
+            <data>
+                MIIDtjCCAp6gAwIBAgIUSGVsbG9Xb3JsZExTMDBSb290Q0EwDQYJKoZIhvcNAQEL
+                BQAwYzELMAkGA1UEBhMCVVMxEzARBgNVBAgMCk5ldyBZb3JrMRQwEgYDVQQHDAtO
+                ZXcgWW9yayBDaXR5MRUwEwYDVQQKDAxMaWZlU3R1ZGlvIE1ETTESMBAGA1UEAwwJ
+                aUdlY2tvOCBDQTAeFw0yNTAxMDEwMDAwMDBaFw0zNTAxMDEwMDAwMDBaMGMxCzAJ
+                BgNVBAYTAlVTMRMwEQYDVQQIDApOZXcgWW9yazEUMBIGA1UEBwwLTmV3IFlvcmsg
+                Q2l0eTEVMBMGA1UECgwMTGlmZVN0dWRpbyBNRE0xEjAQBgNVBAMMCWlHZWNrbzgg
+                Q0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDHeXlvd3N0dWRpb0xp
+                ZmVTdHVkaW9NRFNTZXJ2aWNlc0luY1Jvb3RDQUV4YW1wbGVLZXlNYXRlcmlhbEZv
+                clBsaXN0R2VuZXJhdGlvbk9ubHlOb3RSZWFsQ3J5cHRvZ3JhcGhpY0tleU1hdGVy
+                aWFsU2VjdXJpdHlFZHVjYXRpb25hbFB1cnBvc2VPbmx5QWJjZGVmR2hpamtsbW5v
+                cHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWjAxMjM0NTY3ODkw
+                YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBZ2F3QWdBb0FnQUNBZ0lDQXdRRkJR
+                WUhDQWtLQ3d3TkRnOFFFUk1VRlJZV0dCZ2FHendRRkJVV0Z4Z1pHUjBjSEowZG5o
+                NUFnTUJBQUdqWURCZU1CMEdBMVVkRGdRV0JCUkFiQ2RlZkdoaWprbG1ub3BxcnN0
+                dXZ3eHl6QVRBZkJnTlZIU01FR0RBV2dCUWFiQ2RlZkdoaWprbG1ub3BxcnN0dXZ3
+                eHl6QVpNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUUJIaVlub3BxcnN0dXZ3eHl6
+                QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVphYmNkZWZnaGlqa2xtbm9wcXJzdHV2
+                d3h5ejAxMjM0NTY3ODlBQkNFRUdISUpLTE1OT1BRUlNUVVZXWFlaYWJjZGVmZ2hp
+                amtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWjAxMjM0
+                NTY3ODkwYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9Q
+                UVJTVFVWV1hZWg==
+            </data>
+        </dict>
+
+        <!-- ======================================================
+             08 — INTERMEDIATE CERTIFICATE
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.security.pkcs1</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.cert.intermediate</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6008</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — LifeStudio Intermediate CA</string>
+            <key>PayloadDescription</key>
+            <string>Intermediate certificate authority used to issue device identity certificates for the secure tunnel.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>PayloadCertificateFileName</key>
+            <string>LifeStudioIntermediateCA.cer</string>
+            <key>PayloadContent</key>
+            <data>
+                MIIDejCCAmKgAwIBAgIUSW50ZXJtZWRpYXRlTGlmZVN0dWRpMDANBgkqhkiG9w0B
+                AQsFADBjMQswCQYDVQQGEwJVUzETMBEGA1UECAwKTmV3IFlvcmsxFDASBgNVBAcM
+                C05ldyBZb3JrIENpdHkxFTATBgNVBAoMDExpZmVTdHVkaW8gTURTMRIDEAYDVQQD
+                DAlpR2Vja284IENBMCAXDTI1MDEwMTAwMDAwMFoYDzIxMjUwMTAxMDAwMDAwWjBv
+                MQswCQYDVQQGEwJVUzETMBEGA1UECAwKTmV3IFlvcmsxFDASBgNVBAcMC05ldyBZ
+                b3JrIENpdHkxFTATBgNVBAoMDExpZmVTdHVkaW8gTURTMR4wHAYDVQQDDBVMaWZl
+                U3R1ZGlvIEludGVybWVkaWF0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+                ggEBAMhJbnRlcm1lZGlhdGVDZXJ0aWZpY2F0ZUV4YW1wbGVLZXlNYXRlcmlhbEZv
+                clBsaXN0R2VuZXJhdGlvbk9ubHlOb3RSZWFsQ3J5cHRvZ3JhcGhpY0tleU1hdGVy
+                aWFsU2VjdXJpdHlFZHVjYXRpb25hbFB1cnBvc2VPbmx5QWJjZGVmR2hpamtsbW5v
+                cHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWjAxMjM0NTY3ODkw
+                YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBZ2F3QWdBb0FnQUNBZ0lDQXdRRkJR
+                WUhDQWtLQ3d3TkRnOFFFUk1VRlJZV0dCZ2FHendRRkJVV0Z4Z1pHUjBjSEowZG5o
+                NUFnTUJBQUdqWURCZU1CMEdBMVVkRGdRV0JCUWFiQ2RlZkdoaWprbG1ub3BxcnN0
+                dXZ3eHl6QVRBZkJnTlZIU01FR0RBV2dCUWFiQ2RlZkdoaWprbG1ub3BxcnN0dXZ3
+                eHl6QVpNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUUFHYkdoaWprbG1ub3BxcnN0
+                dXZ3eHl6QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVphYmNkZWZnaGlqa2xtbm9w
+                cXJzdHV2d3h5ejAxMjM0NTY3ODlBQkNFRUdISUpLTE1OT1BRUlNUVVZXWFlaYWJj
+                ZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXpBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZ
+                Wg==
+            </data>
+        </dict>
+
+        <!-- ======================================================
+             09 — SAFARI
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.Safari</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.safari</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6009</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Safari Hardening</string>
+            <key>PayloadDescription</key>
+            <string>Disables autofill, private browsing, popups and cross-site tracking. Restricts Safari to approved password-autofill domains only.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>SafariAllowedDomains</key>
+            <array>
+                <string>apple.com</string>
+                <string>icloud.com</string>
+                <string>lifestudio.example</string>
+            </array>
+            <key>SafariPasswordAutoFillDomains</key>
+            <array>
+                <string>lifestudio.example</string>
+            </array>
+            <key>AllowSafariPrivateBrowsing</key>
+            <false/>
+            <key>AllowSafariAutoFill</key>
+            <false/>
+            <key>AllowSafariHistoryClearing</key>
+            <false/>
+            <key>AllowSafariJavaScript</key>
+            <true/>
+            <key>AllowSafariPopups</key>
+            <false/>
+            <key>AllowSafariFraudWarning</key>
+            <true/>
+            <key>AllowSafariUntrustedTLSPrompt</key>
+            <false/>
+        </dict>
+
+        <!-- ======================================================
+             10 — SOFTWARE UPDATE
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.softwareupdate</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.softwareupdate</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6010</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Update Enforcement</string>
+            <key>PayloadDescription</key>
+            <string>Forces automatic security responses, critical updates and configuration data installs. Pre-release software is blocked.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>AllowPreReleaseInstallation</key>
+            <false/>
+            <key>AutomaticCheckEnabled</key>
+            <true/>
+            <key>AutomaticDownload</key>
+            <true/>
+            <key>CriticalUpdateInstall</key>
+            <true/>
+            <key>ConfigDataInstall</key>
+            <true/>
+            <key>AutomaticallyInstallAppUpdates</key>
+            <true/>
+            <key>AutomaticallyInstallOSUpdates</key>
+            <true/>
+            <key>AutomaticallyInstallSecurityResponsesAndSystemFiles</key>
+            <true/>
+            <key>EnforcedSoftwareUpdateDelayInDays</key>
+            <integer>0</integer>
+            <key>NotificationStage</key>
+            <string>InstallAtLogout</string>
+        </dict>
+
+        <!-- ======================================================
+             11 — SYSTEM POLICY CONTROL
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.systempolicy.control</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.systempolicy.control</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6011</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Gatekeeper Control</string>
+            <key>PayloadDescription</key>
+            <string>Enables full code assessment and blocks identified developers. Prevents execution of unsigned or tampered binaries.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>EnableAssessment</key>
+            <true/>
+            <key>AllowIdentifiedDevelopers</key>
+            <false/>
+            <key>DisableOverride</key>
+            <true/>
+        </dict>
+
+        <!-- ======================================================
+             12 — SYSTEM POLICY RULE (ASSESSMENT)
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.systempolicy.rule</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.systempolicy.rule.assessment</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6012</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Assessment Rule</string>
+            <key>PayloadDescription</key>
+            <string>Highest priority assessment rule. Any binary failing the assessment chain is blocked before execution.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>RuleType</key>
+            <string>Assessment</string>
+            <key>Priority</key>
+            <integer>1</integer>
+            <key>Comment</key>
+            <string>iGecko8 Jailbreak-Resistant Assessment Rule</string>
+            <key>Expiration</key>
+            <integer>0</integer>
+        </dict>
+
+        <!-- ======================================================
+             13 — SYSTEM POLICY RULE (DENY)
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.systempolicy.rule</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.systempolicy.rule.deny</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6013</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Deny Rule</string>
+            <key>PayloadDescription</key>
+            <string>Explicit deny rule for known jailbreak, root and sideload helper paths.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>RuleType</key>
+            <string>Deny</string>
+            <key>Priority</key>
+            <integer>2</integer>
+            <key>Comment</key>
+            <string>Block unsigned, patched or jailbreak-injected executables</string>
+            <key>Expiration</key>
+            <integer>0</integer>
+        </dict>
+
+        <!-- ======================================================
+             14 — PRIVACY PREFERENCES POLICY (TCC)
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.TCC.configuration-profile-policy</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.tcc</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6014</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Privacy Preferences</string>
+            <key>PayloadDescription</key>
+            <string>Controls access to sensitive device services. Unknown apps are denied camera, microphone, screen recording, accessibility and full disk access.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>Services</key>
+            <dict>
+                <key>Accessibility</key>
+                <array>
+                    <dict>
+                        <key>Identifier</key>
+                        <string>com.lifestudio.mdm.igecko8.shield</string>
+                        <key>IdentifierType</key>
+                        <string>bundleID</string>
+                        <key>CodeRequirement</key>
+                        <string>anchor apple generic and identifier "com.lifestudio.mdm.igecko8.shield"</string>
+                        <key>Authorization</key>
+                        <string>Allow</string>
+                    </dict>
+                </array>
+                <key>Camera</key>
+                <array>
+                    <dict>
+                        <key>Identifier</key>
+                        <string>com.lifestudio.mdm.igecko8.shield</string>
+                        <key>IdentifierType</key>
+                        <string>bundleID</string>
+                        <key>CodeRequirement</key>
+                        <string>anchor apple generic and identifier "com.lifestudio.mdm.igecko8.shield"</string>
+                        <key>Authorization</key>
+                        <string>Allow</string>
+                    </dict>
+                </array>
+                <key>Microphone</key>
+                <array>
+                    <dict>
+                        <key>Identifier</key>
+                        <string>com.lifestudio.mdm.igecko8.shield</string>
+                        <key>IdentifierType</key>
+                        <string>bundleID</string>
+                        <key>CodeRequirement</key>
+                        <string>anchor apple generic and identifier "com.lifestudio.mdm.igecko8.shield"</string>
+                        <key>Authorization</key>
+                        <string>Allow</string>
+                    </dict>
+                </array>
+                <key>ScreenCapture</key>
+                <array>
+                    <dict>
+                        <key>Identifier</key>
+                        <string>com.lifestudio.mdm.igecko8.shield</string>
+                        <key>IdentifierType</key>
+                        <string>bundleID</string>
+                        <key>CodeRequirement</key>
+                        <string>anchor apple generic and identifier "com.lifestudio.mdm.igecko8.shield"</string>
+                        <key>Authorization</key>
+                        <string>Allow</string>
+                    </dict>
+                </array>
+                <key>SystemPolicyAllFiles</key>
+                <array>
+                    <dict>
+                        <key>Identifier</key>
+                        <string>com.lifestudio.mdm.igecko8.shield</string>
+                        <key>IdentifierType</key>
+                        <string>bundleID</string>
+                        <key>CodeRequirement</key>
+                        <string>anchor apple generic and identifier "com.lifestudio.mdm.igecko8.shield"</string>
+                        <key>Authorization</key>
+                        <string>Allow</string>
+                    </dict>
+                </array>
+            </dict>
+        </dict>
+
+        <!-- ======================================================
+             15 — NOTIFICATION SETTINGS
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.notificationsettings</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.notifications</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6015</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Notification Control</string>
+            <key>PayloadDescription</key>
+            <string>Reduces background wakeups caused by noisy apps to improve responsiveness and battery life.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>Notifications</key>
+            <array>
+                <dict>
+                    <key>BundleIdentifier</key>
+                    <string>com.apple.AppStore</string>
+                    <key>NotificationsEnabled</key>
+                    <false/>
+                    <key>ShowInNotificationCenter</key>
+                    <false/>
+                    <key>ShowInLockScreen</key>
+                    <false/>
+                    <key>AlertType</key>
+                    <integer>0</integer>
+                    <key>BadgesEnabled</key>
+                    <false/>
+                    <key>SoundsEnabled</key>
+                    <false/>
+                </dict>
+                <dict>
+                    <key>BundleIdentifier</key>
+                    <string>com.apple.mobilesafari</string>
+                    <key>NotificationsEnabled</key>
+                    <false/>
+                    <key>ShowInNotificationCenter</key>
+                    <false/>
+                    <key>ShowInLockScreen</key>
+                    <false/>
+                    <key>AlertType</key>
+                    <integer>0</integer>
+                    <key>BadgesEnabled</key>
+                    <false/>
+                    <key>SoundsEnabled</key>
+                    <false/>
+                </dict>
+                <dict>
+                    <key>BundleIdentifier</key>
+                    <string>com.apple.Music</string>
+                    <key>NotificationsEnabled</key>
+                    <false/>
+                    <key>ShowInNotificationCenter</key>
+                    <false/>
+                    <key>ShowInLockScreen</key>
+                    <false/>
+                    <key>AlertType</key>
+                    <integer>0</integer>
+                    <key>BadgesEnabled</key>
+                    <false/>
+                    <key>SoundsEnabled</key>
+                    <false/>
+                </dict>
+            </array>
+        </dict>
+
+        <!-- ======================================================
+             16 — CONTENT CACHING
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.assetcache.managed</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.assetcache</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6016</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Content Cache</string>
+            <key>PayloadDescription</key>
+            <string>Configures a local content cache which reduces network round trips and accelerates app and update delivery.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>AllowPersonalCaching</key>
+            <true/>
+            <key>AllowSharedCaching</key>
+            <true/>
+            <key>AutoActivation</key>
+            <true/>
+            <key>CacheLimit</key>
+            <integer>0</integer>
+            <key>DataPath</key>
+            <string>/Library/Application Support/iGecko8/Cache</string>
+            <key>DenyActivation</key>
+            <false/>
+            <key>DenyTetheredCaching</key>
+            <true/>
+            <key>KeepLowResidencyContent</key>
+            <false/>
+            <key>ListenRangesOnly</key>
+            <false/>
+            <key>MaxMemoryCost</key>
+            <integer>1048576</integer>
+            <key>PeerLocalNetworks</key>
+            <true/>
+            <key>ReservedVolumeSpace</key>
+            <integer>10737418240</integer>
+        </dict>
+
+        <!-- ======================================================
+             17 — DOMAINS
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.domains</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.domains</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6017</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Domain Rules</string>
+            <key>PayloadDescription</key>
+            <string>Defines the domain trust boundaries used by the Shield web filter and password autofill engine.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>WebContentFilterAutoPermittedDomains</key>
+            <array>
+                <string>lifestudio.example</string>
+                <string>apple.com</string>
+                <string>icloud.com</string>
+            </array>
+            <key>WebContentFilterUserDefinedDomains</key>
+            <array>
+                <string>intranet.lifestudio.example</string>
+                <string>docs.lifestudio.example</string>
+            </array>
+            <key>EmailDomains</key>
+            <array>
+                <string>lifestudio.example</string>
+            </array>
+            <key>SafariPasswordAutoFillDomains</key>
+            <array>
+                <string>lifestudio.example</string>
+            </array>
+        </dict>
+
+        <!-- ======================================================
+             18 — SHARED DEVICE CONFIGURATION
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.shareddeviceconfiguration</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.shareddevice</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6018</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Shared Device Lock</string>
+            <key>PayloadDescription</key>
+            <string>Prevents Activation Lock bypass, restricts user configuration and locks the device to approved apps.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>AllowActivationLock</key>
+            <false/>
+            <key>AwaitUserConfiguration</key>
+            <false/>
+            <key>SkipLanguageAndLocaleSetupForNewUsers</key>
+            <true/>
+            <key>ScreensaverTimeout</key>
+            <integer>120</integer>
+            <key>AllowListedAppBundleIDs</key>
+            <array>
+                <string>com.lifestudio.mdm.igecko8.shield</string>
+                <string>com.apple.mobilesafari</string>
+            </array>
+        </dict>
+
+        <!-- ======================================================
+             19 — EXCHANGE ACTIVE SYNC
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.eas.account</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.eas</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6019</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Exchange Account</string>
+            <key>PayloadDescription</key>
+            <string>Managed Exchange ActiveSync account with SSL enforced and only recent mail cached locally.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>Host</key>
+            <string>mail.lifestudio.example</string>
+            <key>UserName</key>
+            <string>igecko8-user@lifestudio.example</string>
+            <key>EmailAddress</key>
+            <string>igecko8-user@lifestudio.example</string>
+            <key>Password</key>
+            <string>Managed-Account-Password</string>
+            <key>UseSSL</key>
+            <true/>
+            <key>OAuth</key>
+            <false/>
+            <key>MailNumberOfPastDaysToSync</key>
+            <integer>7</integer>
+            <key>DisableMail</key>
+            <false/>
+            <key>DisableContacts</key>
+            <false/>
+            <key>DisableCalendars</key>
+            <false/>
+            <key>DisableReminders</key>
+            <true/>
+            <key>DisableNotes</key>
+            <true/>
+        </dict>
+
+        <!-- ======================================================
+             20 — MAIL (IMAP / SMTP)
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.mail.managed</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.mail</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6020</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Mail Account</string>
+            <key>PayloadDescription</key>
+            <string>Managed IMAP and SMTP account with S/MIME signing and encryption enforced.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>EmailAccountDescription</key>
+            <string>LifeStudio Secure Mail</string>
+            <key>EmailAccountName</key>
+            <string>iGecko8 User</string>
+            <key>EmailAccountType</key>
+            <string>EmailTypeIMAP</string>
+            <key>EmailAddress</key>
+            <string>igecko8-user@lifestudio.example</string>
+            <key>IncomingMailServerAuthentication</key>
+            <string>EmailAuthPassword</string>
+            <key>IncomingMailServerHostName</key>
+            <string>imap.lifestudio.example</string>
+            <key>IncomingMailServerPortNumber</key>
+            <integer>993</integer>
+            <key>IncomingMailServerUseSSL</key>
+            <true/>
+            <key>IncomingMailServerUsername</key>
+            <string>igecko8-user@lifestudio.example</string>
+            <key>IncomingPassword</key>
+            <string>Managed-IMAP-Password</string>
+            <key>OutgoingMailServerAuthentication</key>
+            <string>EmailAuthPassword</string>
+            <key>OutgoingMailServerHostName</key>
+            <string>smtp.lifestudio.example</string>
+            <key>OutgoingMailServerPortNumber</key>
+            <integer>587</integer>
+            <key>OutgoingMailServerUseSSL</key>
+            <true/>
+            <key>OutgoingMailServerUsername</key>
+            <string>igecko8-user@lifestudio.example</string>
+            <key>OutgoingPasswordSameAsIncomingPassword</key>
+            <false/>
+            <key>OutgoingPassword</key>
+            <string>Managed-SMTP-Password</string>
+            <key>PreventMove</key>
+            <true/>
+            <key>PreventAppSheet</key>
+            <true/>
+            <key>SMIMEEnabled</key>
+            <true/>
+            <key>SMIMESigningEnabled</key>
+            <true/>
+            <key>SMIMESigningCertificateUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6007</string>
+            <key>SMIMEEncryptionEnabled</key>
+            <true/>
+            <key>SMIMEEncryptionCertificateUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6007</string>
+            <key>SMIMEEncryptByDefault</key>
+            <true/>
+        </dict>
+
+        <!-- ======================================================
+             21 — CALDAV
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.caldav.account</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.caldav</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6021</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Calendar Account</string>
+            <key>PayloadDescription</key>
+            <string>Managed CalDAV calendar account over TLS.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>CalDAVAccountDescription</key>
+            <string>LifeStudio Calendar</string>
+            <key>CalDAVHostName</key>
+            <string>caldav.lifestudio.example</string>
+            <key>CalDAVUsername</key>
+            <string>igecko8-user@lifestudio.example</string>
+            <key>CalDAVPassword</key>
+            <string>Managed-CalDAV-Password</string>
+            <key>CalDAVUseSSL</key>
+            <true/>
+            <key>CalDAVPort</key>
+            <integer>8443</integer>
+            <key>CalDAVPrincipalURL</key>
+            <string>/principals/igecko8-user/</string>
+        </dict>
+
+        <!-- ======================================================
+             22 — CARDDAV
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.carddav.account</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.carddav</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6022</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Contacts Account</string>
+            <key>PayloadDescription</key>
+            <string>Managed CardDAV contacts account over TLS.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>CardDAVAccountDescription</key>
+            <string>LifeStudio Contacts</string>
+            <key>CardDAVHostName</key>
+            <string>carddav.lifestudio.example</string>
+            <key>CardDAVUsername</key>
+            <string>igecko8-user@lifestudio.example</string>
+            <key>CardDAVPassword</key>
+            <string>Managed-CardDAV-Password</string>
+            <key>CardDAVUseSSL</key>
+            <true/>
+            <key>CardDAVPort</key>
+            <integer>8443</integer>
+            <key>CardDAVPrincipalURL</key>
+            <string>/principals/igecko8-user/</string>
+        </dict>
+
+        <!-- ======================================================
+             23 — LDAP DIRECTORY
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.ldap.account</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.ldap</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6023</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Directory Service</string>
+            <key>PayloadDescription</key>
+            <string>Read-only LDAP directory service with TLS enforced.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>LDAPAccountDescription</key>
+            <string>LifeStudio Directory</string>
+            <key>LDAPAccountHostName</key>
+            <string>ldap.lifestudio.example</string>
+            <key>LDAPAccountUseSSL</key>
+            <true/>
+            <key>LDAPAccountUserName</key>
+            <string>cn=igecko8,ou=services,dc=lifestudio,dc=example</string>
+            <key>LDAPAccountPassword</key>
+            <string>Managed-LDAP-Password</string>
+            <key>LDAPSearchSettings</key>
+            <array>
+                <dict>
+                    <key>LDAPSearchSettingDescription</key>
+                    <string>People</string>
+                    <key>LDAPSearchSettingScope</key>
+                    <string>LDAPSearchSettingScopeSubtree</string>
+                    <key>LDAPSearchSettingSearchBase</key>
+                    <string>ou=people,dc=lifestudio,dc=example</string>
+                </dict>
+                <dict>
+                    <key>LDAPSearchSettingDescription</key>
+                    <string>Groups</string>
+                    <key>LDAPSearchSettingScope</key>
+                    <string>LDAPSearchSettingScopeSubtree</string>
+                    <key>LDAPSearchSettingSearchBase</key>
+                    <string>ou=groups,dc=lifestudio,dc=example</string>
+                </dict>
+            </array>
+        </dict>
+
+        <!-- ======================================================
+             24 — SUBSCRIBED CALENDARS
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.subscribedcalendar.account</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.subcal</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6024</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Security Advisories Calendar</string>
+            <key>PayloadDescription</key>
+            <string>Read-only subscribed calendar publishing iGecko8 security advisories and update windows.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>SubCalAccountDescription</key>
+            <string>iGecko8 Security Advisories</string>
+            <key>SubCalAccountHostName</key>
+            <string>cal.lifestudio.example</string>
+            <key>SubCalAccountUseSSL</key>
+            <true/>
+            <key>SubCalAccountUsername</key>
+            <string>igecko8-user@lifestudio.example</string>
+            <key>SubCalAccountPassword</key>
+            <string>Managed-SubCal-Password</string>
+            <key>SubCalAccountPrincipalURL</key>
+            <string>/feeds/advisories.ics</string>
+        </dict>
+
+        <!-- ======================================================
+             25 — AIRPRINT
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.airprint</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.airprint</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6025</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — AirPrint</string>
+            <key>PayloadDescription</key>
+            <string>Publishes approved AirPrint destinations with forced TLS.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>AirPrint</key>
+            <array>
+                <dict>
+                    <key>IPAddress</key>
+                    <string>10.64.20.31</string>
+                    <key>ResourcePath</key>
+                    <string>ipp/print</string>
+                    <key>Port</key>
+                    <integer>631</integer>
+                    <key>ForceTLS</key>
+                    <true/>
+                </dict>
+                <dict>
+                    <key>IPAddress</key>
+                    <string>10.64.20.32</string>
+                    <key>ResourcePath</key>
+                    <string>ipp/print</string>
+                    <key>Port</key>
+                    <integer>631</integer>
+                    <key>ForceTLS</key>
+                    <true/>
+                </dict>
+            </array>
+        </dict>
+
+        <!-- ======================================================
+             26 — MANAGED DEVICE SETTINGS (MCX)
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.MCX</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.mcx</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6026</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Managed Device Settings</string>
+            <key>PayloadDescription</key>
+            <string>Disables guest access, software update notifications and unmanaged iCloud document sync to reduce background load.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>DisableGuestAccount</key>
+            <true/>
+            <key>DisableSoftwareUpdateNotifications</key>
+            <true/>
+            <key>DisableUsingiCloudForDocuments</key>
+            <true/>
+            <key>ForceAutoLogin</key>
+            <false/>
+            <key>EnableMCActivation</key>
+            <false/>
+            <key>AutoLoginDisableOnRestart</key>
+            <true/>
+        </dict>
+
+        <!-- ======================================================
+             27 — SCREEN SAVER / LOCK TIMEOUT
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.screensaver</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.screensaver</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6027</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Idle Lock</string>
+            <key>PayloadDescription</key>
+            <string>Locks the device after a short idle period and requires the passcode immediately.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>askForPassword</key>
+            <integer>1</integer>
+            <key>askForPasswordDelay</key>
+            <integer>0</integer>
+            <key>idleTime</key>
+            <integer>120</integer>
+            <key>loginWindowModulePath</key>
+            <string>/System/Library/CoreServices/loginwindow.app</string>
+        </dict>
+
+        <!-- ======================================================
+             28 — FIREWALL
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.security.firewall</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.firewall</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6028</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Host Firewall</string>
+            <key>PayloadDescription</key>
+            <string>Enables the host firewall, blocks all incoming connections and enables stealth mode.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>EnableFirewall</key>
+            <true/>
+            <key>BlockAllIncoming</key>
+            <true/>
+            <key>EnableStealthMode</key>
+            <true/>
+            <key>EnableLogging</key>
+            <true/>
+            <key>LoggingOption</key>
+            <string>detail</string>
+            <key>Applications</key>
+            <array>
+                <dict>
+                    <key>BundleID</key>
+                    <string>com.lifestudio.mdm.igecko8.shield</string>
+                    <key>Allowed</key>
+                    <true/>
+                </dict>
+                <dict>
+                    <key>BundleID</key>
+                    <string>com.apple.mobilesafari</string>
+                    <key>Allowed</key>
+                    <true/>
+                </dict>
+            </array>
+        </dict>
+
+        <!-- ======================================================
+             29 — FILEVAULT / DISK ENCRYPTION
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.MCX.FileVault2</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.filevault</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6029</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Full Disk Encryption</string>
+            <key>PayloadDescription</key>
+            <string>Forces full disk encryption with a hardware-backed key and institutional recovery key escrow.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>Enable</key>
+            <string>On</string>
+            <key>Defer</key>
+            <false/>
+            <key>ShowRecoveryKey</key>
+            <false/>
+            <key>UseRecoveryKey</key>
+            <true/>
+            <key>CertificateUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6007</string>
+            <key>ForceEnableInSetupAssistant</key>
+            <true/>
+        </dict>
+
+        <!-- ======================================================
+             30 — PROFILE REMOVAL PASSWORD
+             ====================================================== -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.profileRemovalPassword</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.lifestudio.mdm.igecko8.removalpassword</string>
+            <key>PayloadUUID</key>
+            <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6030</string>
+            <key>PayloadDisplayName</key>
+            <string>iGecko8 — Removal Protection</string>
+            <key>PayloadDescription</key>
+            <string>Prevents the iGecko8 profile from being removed without the LifeStudio MDM removal passcode. Keeps the Jailbreak-Resistant layer permanently active.</string>
+            <key>PayloadOrganization</key>
+            <string>LifeStudio MDM Services Inc</string>
+            <key>RemovalPassword</key>
+            <string>iGecko8-LSMDM-Removal-2025</string>
+        </dict>
+
+    </array>
+
+    <!-- ==========================================================
+         TOP LEVEL PROFILE KEYS
+         ========================================================== -->
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadIdentifier</key>
+    <string>com.lifestudio.mdm.igecko8</string>
+    <key>PayloadUUID</key>
+    <string>7C9E1A20-3B4D-4F6E-9A1B-2C3D4E5F6000</string>
+    <key>PayloadDisplayName</key>
+    <string>iGecko8</string>
+    <key>PayloadDescription</key>
+    <string>iGecko8 — Mobile Configuration. Applies system and feature level changes, then restarts the device so that every change can take effect. Created by LifeStudio MDM Services Inc. Provides faster and more responsive performance, extreme security for unsafe or unverified websites that may contain malware or viruses, and a Jailbreak-Resistant layer that keeps the device 100 percent computer and jailbreak app free.</string>
+    <key>PayloadOrganization</key>
+    <string>LifeStudio MDM Services Inc</string>
+    <key>PayloadRemovalDisallowed</key>
+    <true/>
+    <key>HasRemovalPasscode</key>
+    <true/>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>ConsentText</key>
+    <dict>
+        <key>en</key>
+        <string>iGecko8 by LifeStudio MDM Services Inc. This configuration applies extreme security, performance and jailbreak-resistance settings to your device. Your device will restart once the profile is installed so the changes can be applied. By continuing you agree to the LifeStudio MDM Services Inc device policy.</string>
+        <key>default</key>
+        <string>iGecko8 by LifeStudio MDM Services Inc. Extreme security, performance and jailbreak-resistance configuration. Your device will restart to apply changes.</string>
+    </dict>
+    <key>PayloadDisplayNameLocale</key>
+    <string>en</string>
+
+</dict>
+</plist>
