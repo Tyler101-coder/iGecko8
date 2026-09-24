@@ -74,3 +74,38 @@ Before using these files, replace the following:
 ---
 
 ## 📁 Repository layout
+
+.
+├── iGecko8.mobileconfig # iOS / iPadOS configuration profile
+├── iGecko8-policy.json # Android Enterprise management policy
+├── README.md # This file
+└── .gitignore # Git ignore rules
+
+
+---
+
+## ✅ Validation
+
+**iOS profile:**
+
+```bash
+
+plutil -lint iGecko8.mobileconfig
+
+```
+
+**Android policy:**
+
+```bash
+
+jq . iGecko8-policy.json
+
+```
+
+## 📄 License
+
+# MIT License. See LICENSE for details.
+
+## 	🤝 Contributing
+
+# Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
